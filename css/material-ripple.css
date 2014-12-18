@@ -1,0 +1,86 @@
+.btn {
+  
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  padding: 12px 28px;
+  border: 0;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+ 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background: white;
+  opacity: 0.2;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+}
+ 
+.ink.animate {
+  animation: ripple 0.65s cubic-bezier(.4, 0, .2, 1);
+  -webkit-animation: ripple 0.65s cubic-bezier(.4, 0, .2, 1);
+}
+ 
+.ink.focus {
+  background: white;
+  opacity: 0.4;
+  animation: ripplefocus 2s infinite;
+  -webkit-animation: ripplefocus 2s infinite;
+}
+ 
+@keyframes
+ripple {        /*scale the element to 250% to safely cover the entire link and fade it out*/
+        100% {
+ opacity: 0;
+ -webkit-transform: scale(0.85);
+ -ms-transform: scale(0.85);
+ transform: scale(0.85);
+}
+}
+ 
+@-webkit-keyframes
+ripple {        /*scale the element to 250% to safely cover the entire link and fade it out*/
+        100% {
+ opacity: 0;
+ transform: scale(0.85);
+ -webkit-transform: scale(0.85);
+}
+}
+ 
+@keyframes
+ripplefocus {       /*scale the element infinitly on focus*/
+        0%, 100% {
+ transform: scale(0.8);
+ -webkit-transform: scale(0.8);
+}
+ 50% {
+ transform: scale(0.85);
+ -webkit-transform: scale(0.85);
+}
+}
+ 
+@-webkit-keyframes
+ripplefocus {  0%, 100% {
+ transform: scale(0.8);
+ -webkit-transform: scale(0.8);
+}
+ 50% {
+ transform: scale(0.85);
+ -webkit-transform: scale(0.85);
+}
+}
