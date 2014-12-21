@@ -11,7 +11,9 @@ $(document).ready(
         $('ul', this).fadeOut();
       }
     );
+
   }
+
 );
 
 $(function() {
@@ -22,3 +24,17 @@ options = {
 };
 rippleEffect = new $.RippleEffect(options);
 });
+
+function setMenuColor(){
+  var e = document.getElementById('dropdown-select');
+  var strUser = e.options[e.selectedIndex].value;
+  var elems = document.querySelectorAll('.nav li a');
+  for (var i=0; i<elems.length; i++) {
+        elems[i].style.background = e.value;
+      }
+  e.onchange = function(){
+      for (var i=0; i<elems.length; i++) {
+        elems[i].style.background = e.value;
+      }
+  }
+}

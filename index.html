@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/material-menu.css" />
     <link rel="stylesheet" href="css/material-ripple.css" />
   </head>
-  <body>
+  <body onload="setMenuColor()">
     <!-- Use this navigation div as your menu bar div -->
   	<div class="navigation">
   		<ul class="nav">
@@ -34,8 +34,18 @@
   			</li>
   		</ul>
   	</div>
-    <br><br><br><br><br>
-    <input class="color" value="66ff00">
+    
+    <div class="dropdown">
+    <select class="ddwn" id="dropdown-select">
+    	<option value="#e51c23" style="background-color:#e51c23;" selected>Red</option>
+    	<option value="#009688" style="background-color:#009688;">Green</option>
+    	<option value="#673ab7" style="background-color:#673ab7;">Deep Purple</option>
+    	<option value="#03a9f4" style="background-color:#03a9f4;">Light Blue</option>
+    	<option value="#3f51b5" style="background-color:#3f51b5;">Indigo</option>
+    	<option value="#ff5722" style="background-color:#ff5722;">Deep Orange</option>
+    	<option value="#00bcd4" style="background-color:#00bcd4;">Cyan</option>
+    </select>
+    </div>
 
   </body>
 </html>
